@@ -16,19 +16,4 @@ Accept: application/json
         {"matematica": 10}
     ]
 }
-{
-    "medida": "boletim",
-    "marcadores": [
-        {"local": "escola"},
-        {"acao": "estudando"},
-        {"nome": "mateus"},
-        {"perfil": "aluno"}
-    ],
-    "valores": [
-        {"filosofia": 9},
-        {"fisica": 8},
-        {"matematica": 10}
-    ]
-}
-
 # boletim,local=escola,acao=estudando,nome=mateus,perfil=aluno filosofia=9,fisica=8,matematica=10
