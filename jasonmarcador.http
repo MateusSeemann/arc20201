@@ -3,17 +3,16 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "medida": "ideia",
+    "medida": "boletim",
     "marcadores": [
-        {"local": "quarto"},
-        {"personagem": "Matias"},
-        {"acao": "sonhando"}
-        {"nome": "seemann"}
-        {"perfil": "mateus"}
+        {"local": "escola"},
+        {"acao": "estudando"},
+        {"nome": "mateus"},
+        {"perfil": "aluno"}
     ],
     "valores": [
-        {"latitude": -59.6084177},
-        {"longitude": 49.6354691},
-        {"altitude": 38}
+        {"filosofia": 9},
+        {"fisica": 8},
+        {"matematica": 10}
     ]
 }
