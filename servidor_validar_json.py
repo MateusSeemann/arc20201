@@ -1,3 +1,5 @@
+import requests
+
 def validar_json(dados):
     # Verificar se os campos obrigatórios do JSON constam e são válidos.
 
@@ -28,25 +30,26 @@ def validar_json(dados):
             resposta = {
                 "Erro": "Campo 'valores' deve ser uma lista não vazia."}
             return resposta, 400
-        
-        if "marcadores" not in dados:
+    
+    
+    if "marcadores" not in dados:
         # Em caso contrário, retornar 400.
         resposta = {"Erro": "Campo 'marcadores' inexistente."}
         return resposta, 400
     else:
         #Criada função-filtro.
-        def url_from_json(marcador_url):
-           if "url" in marcador_url:
-                return marcador_url["url"]
+        def url_from_json(marcadores_url):
+           if "url" in marcadores_url:
+                return marcadores_url["url"]
         #
         url = list(filter(url_from_json, dados['marcadores']))['url']
         print(url)
 
         try:
             r = requests.get(url)
-
+                    
         except:
-            resposta = {"Erro": "Formato inválido para URL."}
+            resposta = {"Erro": "Verifique o campo URL em marcadores."}            
             return resposta, 400
 
     # Se todas as verificações foram feitas, retornar 200.
