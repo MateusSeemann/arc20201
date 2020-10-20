@@ -8,10 +8,9 @@ Accept: application/json
 {
     "medida": "ideia",
     "marcadores": [
-        {"local": "quarto"},
         {"personagem": "Matias"},
-        {"acao": "sonhando"}
-        {"nome": "seemann"}
+        {"acao": "sonhando"},
+        {"nome": "seemann"},
         {"perfil": "mateus"}
     ],
     "valores": [

@@ -30,14 +30,12 @@ def validar_json(dados):
             resposta = {
                 "Erro": "Campo 'valores' deve ser uma lista não vazia."}
             return resposta, 400
-    
-    
+
     if "marcadores" not in dados:
         # Em caso contrário, retornar 400.
         resposta = {"Erro": "Campo 'marcadores' inexistente."}
         return resposta, 400
     else:
-        #Criada função-filtro.
         def url_from_json(marcadores_url):
            if "url" in marcadores_url:
                 return marcadores_url["url"]
@@ -51,6 +49,7 @@ def validar_json(dados):
         except:
             resposta = {"Erro": "Verifique o campo URL em marcadores."}            
             return resposta, 400
+            
 
     # Se todas as verificações foram feitas, retornar 200.
     resposta = {"Sucesso": "JSON válido."}
