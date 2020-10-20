@@ -14,6 +14,8 @@ def validar_json(dados):
             return resposta, 400
 
     # Verificar se a chave 'valores' consta no JSON.
+    
+
     if "valores" not in dados:
         # Em caso contrário, retornar 400.
         resposta = {"Erro": "Campo 'valores' inexistente."}
